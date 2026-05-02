@@ -87,7 +87,11 @@ apis:
 common:
 - type: Website
   url: https://json-schema.org
-- type: JSON-LD
+- type: JSONSchema
+  url: json-schema/schema-design-api-schema-schema.json
+- type: JSONStructure
+  url: json-structure/schema-design-api-schema-structure.json
+- type: JSONLDContext
   url: json-ld/schema-design-context.jsonld
 - type: Vocabulary
   url: vocabulary/schema-design-vocabulary.yml
