@@ -1,0 +1,61 @@
+{
+  "title": "API Schema Design Structure",
+  "description": "Documentation of the structural patterns and conventions used in schema design for APIs.",
+  "categories": {
+    "primitiveTypes": {
+      "description": "Basic data types common across schema formats",
+      "types": {
+        "string": { "examples": ["name", "email", "url", "id"] },
+        "integer": { "examples": ["count", "page", "statusCode"] },
+        "number": { "examples": ["price", "latitude", "weight"] },
+        "boolean": { "examples": ["isActive", "enabled", "required"] },
+        "null": { "examples": ["optionalField with null"] }
+      }
+    },
+    "compositeTypes": {
+      "description": "Complex types built from primitives",
+      "types": {
+        "object": { "description": "Key-value pair structure", "example": {"id": "string", "name": "string"} },
+        "array": { "description": "Ordered list of items", "example": ["item1", "item2"] },
+        "oneOf": { "description": "Value must match exactly one of the provided schemas" },
+        "anyOf": { "description": "Value must match at least one schema" },
+        "allOf": { "description": "Value must match all provided schemas (composition)" }
+      }
+    },
+    "formats": {
+      "description": "Standard string formats for semantic validation",
+      "common": {
+        "date": "ISO 8601 date (2026-05-02)",
+        "date-time": "ISO 8601 datetime (2026-05-02T14:00:00Z)",
+        "email": "Email address",
+        "uri": "URI / URL",
+        "uuid": "UUID v4",
+        "ipv4": "IPv4 address",
+        "ipv6": "IPv6 address",
+        "binary": "Binary file data"
+      }
+    },
+    "namingConventions": {
+      "description": "Common field naming patterns in API schemas",
+      "patterns": {
+        "camelCase": { "example": "firstName", "usedIn": ["JSON API", "GraphQL", "JavaScript SDKs"] },
+        "snake_case": { "example": "first_name", "usedIn": ["Python APIs", "PostgreSQL", "some REST APIs"] },
+        "PascalCase": { "example": "FirstName", "usedIn": ["C# SDKs", ".NET APIs"] },
+        "kebab-case": { "example": "first-name", "usedIn": ["HTML attributes", "CSS", "URL paths"] }
+      }
+    },
+    "designPrinciples": {
+      "description": "Key principles for good schema design",
+      "principles": [
+        "Use meaningful, descriptive field names",
+        "Avoid abbreviations unless domain-standard",
+        "Limit nesting to 2-3 levels for readability",
+        "Always define required vs optional fields explicitly",
+        "Provide field-level descriptions",
+        "Use enums for finite value sets",
+        "Include example values",
+        "Design for extensibility (avoid breaking changes)"
+      ]
+    }
+  }
+}

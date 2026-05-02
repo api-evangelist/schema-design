@@ -1,0 +1,95 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "sdo": "https://api-evangelist.github.io/schema-design/vocab#",
+
+    "SchemaDefinition": {
+      "@id": "sdo:SchemaDefinition",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A formal definition of the structure and constraints of a data type"
+    },
+    "SchemaField": {
+      "@id": "sdo:SchemaField",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A named property or attribute in a schema definition"
+    },
+
+    "name": {
+      "@id": "schema:name",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "schema:description",
+      "@type": "xsd:string"
+    },
+    "version": {
+      "@id": "schema:version",
+      "@type": "xsd:string"
+    },
+    "created": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:date"
+    },
+    "modified": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:date"
+    },
+    "format": {
+      "@id": "sdo:schemaFormat",
+      "@type": "xsd:string"
+    },
+    "fields": {
+      "@id": "sdo:hasField",
+      "@container": "@set"
+    },
+    "required": {
+      "@id": "sdo:isRequired",
+      "@type": "xsd:boolean"
+    },
+    "constraints": {
+      "@id": "sdo:hasConstraints",
+      "@type": "@id"
+    },
+    "examples": {
+      "@id": "schema:workExample",
+      "@container": "@set"
+    },
+    "tags": {
+      "@id": "schema:keywords",
+      "@container": "@set"
+    },
+    "schemaFormat": {
+      "@id": "sdo:schemaFormat",
+      "@type": "xsd:string"
+    },
+    "jsonSchema": {
+      "@id": "sdo:jsonSchemaFormat",
+      "@type": "xsd:string",
+      "rdfs:comment": "JSON Schema format (Draft 4, 7, 2019-09, 2020-12)"
+    },
+    "openApiSchema": {
+      "@id": "sdo:openApiSchemaFormat",
+      "@type": "xsd:string",
+      "rdfs:comment": "OpenAPI Schema Object"
+    },
+    "graphqlSchema": {
+      "@id": "sdo:graphqlSchemaFormat",
+      "@type": "xsd:string",
+      "rdfs:comment": "GraphQL SDL type definition"
+    },
+    "avroSchema": {
+      "@id": "sdo:avroSchemaFormat",
+      "@type": "xsd:string",
+      "rdfs:comment": "Apache Avro JSON schema format"
+    },
+    "protobufSchema": {
+      "@id": "sdo:protobufSchemaFormat",
+      "@type": "xsd:string",
+      "rdfs:comment": "Protocol Buffers .proto format"
+    }
+  }
+}

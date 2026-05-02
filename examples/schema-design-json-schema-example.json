@@ -1,0 +1,77 @@
+{
+  "title": "JSON Schema Example - User Profile",
+  "description": "Example of a well-designed JSON Schema for a user profile entity, demonstrating best practices including descriptions, formats, enums, and required fields.",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/schemas/user-profile",
+    "title": "User Profile",
+    "description": "A registered user's profile information",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Unique identifier for the user",
+        "readOnly": true
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "User's primary email address"
+      },
+      "displayName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100,
+        "description": "User's publicly visible display name"
+      },
+      "role": {
+        "type": "string",
+        "enum": ["admin", "editor", "viewer"],
+        "description": "User's role within the system"
+      },
+      "createdAt": {
+        "type": "string",
+        "format": "date-time",
+        "description": "ISO 8601 timestamp when the account was created",
+        "readOnly": true
+      },
+      "preferences": {
+        "type": "object",
+        "description": "User-specific settings and preferences",
+        "properties": {
+          "theme": {
+            "type": "string",
+            "enum": ["light", "dark", "system"],
+            "default": "system"
+          },
+          "language": {
+            "type": "string",
+            "description": "BCP 47 language tag",
+            "example": "en-US"
+          },
+          "notifications": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "required": ["email", "displayName", "role"],
+    "additionalProperties": false,
+    "examples": [
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "email": "jane.smith@example.com",
+        "displayName": "Jane Smith",
+        "role": "editor",
+        "createdAt": "2026-01-15T09:00:00Z",
+        "preferences": {
+          "theme": "dark",
+          "language": "en-US",
+          "notifications": true
+        }
+      }
+    ]
+  }
+}

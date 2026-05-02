@@ -1,0 +1,154 @@
+name: Schema Design Vocabulary
+description: Domain vocabulary for schema design in the context of APIs and data exchange, covering key concepts, patterns, formats, and practices used when defining data structures.
+url: https://github.com/api-evangelist/schema-design
+created: '2026-05-02'
+modified: '2026-05-02'
+tags:
+- Schema Design
+- Data Modeling
+- API Design
+- Vocabulary
+terms:
+- term: Schema
+  label: Schema
+  definition: A formal description of the structure, constraints, and semantics of a data type or document format. Schemas define what fields are present, their data types, which are required, and any validation rules.
+  tags:
+  - Core Concept
+  - Validation
+
+- term: SchemaFirst
+  label: Schema-First Design
+  definition: An API design approach where the schema (data model contract) is defined before writing code. The schema serves as the source of truth that drives documentation, validation, code generation, and client/server implementation.
+  tags:
+  - Design Approach
+  - Best Practice
+
+- term: JSONSchema
+  label: JSON Schema
+  definition: A vocabulary for annotating and validating JSON documents. JSON Schema uses keywords like type, properties, required, enum, and format to describe the expected shape of JSON data. The current stable version is Draft 2020-12.
+  tags:
+  - Format
+  - Standard
+  - JSON
+
+- term: OpenAPISchema
+  label: OpenAPI Schema Object
+  definition: The schema mechanism in OpenAPI Specification (OAS) for describing request and response payloads. OpenAPI 3.0 uses a subset of JSON Schema Draft 4/5 with extensions; OpenAPI 3.1 aligns with JSON Schema 2020-12.
+  tags:
+  - OpenAPI
+  - REST
+  - Format
+
+- term: GraphQLType
+  label: GraphQL Type
+  definition: The fundamental building block in GraphQL schemas. GraphQL defines Object Types (fields returning complex types), Scalar Types (primitives like String, Int, Boolean), Enum Types, Input Types, Interface Types, and Union Types.
+  tags:
+  - GraphQL
+  - Type System
+
+- term: DataType
+  label: Data Type
+  definition: The classification of a field's acceptable values. Common primitive types include string, integer, number (float), boolean, and null. Complex types include object (map), array (list), and binary.
+  tags:
+  - Core Concept
+  - Types
+
+- term: Enum
+  label: Enumeration
+  definition: A data type that restricts a field's value to a finite set of named constants. For example, a status field might be restricted to ["pending", "active", "closed"]. Enums improve schema clarity and enable exhaustive validation.
+  tags:
+  - Validation
+  - Constraints
+
+- term: AdditionalProperties
+  label: Additional Properties
+  definition: In JSON Schema, the additionalProperties keyword controls whether an object can have properties beyond those explicitly defined. Setting it to false creates a "closed" schema that rejects undeclared fields, improving API contract strictness.
+  tags:
+  - JSON Schema
+  - Constraints
+  - Validation
+
+- term: AllOf
+  label: allOf Composition
+  definition: A JSON Schema composition keyword requiring that a value validates against ALL listed subschemas. Used to combine multiple schemas through inheritance-like composition, similar to extending a base schema.
+  tags:
+  - Composition
+  - JSON Schema
+
+- term: OneOf
+  label: oneOf Discriminated Union
+  definition: A JSON Schema composition keyword requiring that a value validates against EXACTLY ONE of the listed subschemas. Used for discriminated unions where a field determines which schema applies.
+  tags:
+  - Composition
+  - JSON Schema
+  - Polymorphism
+
+- term: AnyOf
+  label: anyOf Union
+  definition: A JSON Schema composition keyword requiring that a value validates against AT LEAST ONE of the listed subschemas. More permissive than oneOf; used when multiple schema forms are acceptable.
+  tags:
+  - Composition
+  - JSON Schema
+
+- term: Required
+  label: Required Fields
+  definition: Fields in a schema that must be present in any valid instance. In JSON Schema, the required keyword is an array of property names that must be included. In GraphQL, a field is required by default unless it has a ! type modifier for non-null.
+  tags:
+  - Constraints
+  - Validation
+
+- term: Nullable
+  label: Nullable Field
+  definition: A field that can accept a null value in addition to its declared type. In JSON Schema, expressed as type: [string, null] or using anyOf with null. In OpenAPI 3.0, the nullable: true extension is used; in 3.1, type arrays handle this natively.
+  tags:
+  - Types
+  - OpenAPI
+
+- term: ReadOnly
+  label: Read-Only Property
+  definition: A schema property marked as readOnly: true indicating it is computed or system-assigned and should not be included in request payloads. Examples include id, createdAt, and updatedAt fields.
+  tags:
+  - API Design
+  - Conventions
+
+- term: WriteOnly
+  label: Write-Only Property
+  definition: A schema property marked as writeOnly: true indicating it should be included in request payloads but will not be returned in responses. Commonly used for passwords and sensitive input fields.
+  tags:
+  - API Design
+  - Security
+
+- term: Discriminator
+  label: Discriminator
+  definition: In OpenAPI, a property used to determine which schema variant applies when using oneOf/anyOf/allOf. The discriminator tells parsers which concrete type to use during deserialization based on a field value.
+  tags:
+  - OpenAPI
+  - Polymorphism
+
+- term: Ref
+  label: $ref (Schema Reference)
+  definition: A JSON Schema keyword ($ref) that allows one schema to reference another, enabling reuse and composition. In OpenAPI, $ref is used to point to reusable components/schemas definitions.
+  tags:
+  - JSON Schema
+  - Reuse
+
+- term: CamelCase
+  label: camelCase Naming
+  definition: A naming convention where the first word is lowercase and subsequent words start with an uppercase letter (e.g., firstName, createdAt). The most common convention for JSON API field names in JavaScript/TypeScript ecosystems.
+  tags:
+  - Naming Conventions
+  - Best Practice
+
+- term: SnakeCase
+  label: snake_case Naming
+  definition: A naming convention where words are separated by underscores and all characters are lowercase (e.g., first_name, created_at). Common in Python APIs, PostgreSQL column names, and some REST APIs.
+  tags:
+  - Naming Conventions
+
+- term: SchemaRegistry
+  label: Schema Registry
+  definition: A centralized repository for storing and managing schema versions, used in event-driven architectures (especially Kafka) to enforce schema compatibility between producers and consumers. Confluent Schema Registry is the most widely used implementation.
+  tags:
+  - Infrastructure
+  - Event Streaming
+  - Kafka

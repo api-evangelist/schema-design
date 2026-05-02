@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/api-evangelist/schema-design/blob/main/json-schema/schema-design-api-schema-schema.json",
+  "title": "API Schema Definition",
+  "description": "Represents a schema definition used in API design — a formal description of the structure and constraints of a data type used in requests, responses, or events.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Human-readable name for this schema"
+    },
+    "format": {
+      "type": "string",
+      "description": "Schema format or specification",
+      "enum": ["json-schema", "openapi", "graphql", "avro", "protobuf", "xsd", "thrift"]
+    },
+    "version": {
+      "type": "string",
+      "description": "Schema version identifier"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of what this schema represents"
+    },
+    "fields": {
+      "type": "array",
+      "description": "List of field definitions in this schema",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "required": { "type": "boolean" },
+          "description": { "type": "string" },
+          "format": { "type": "string" },
+          "enum": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "default": {}
+        },
+        "required": ["name", "type"]
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "description": "Validation constraints applied to the schema",
+      "properties": {
+        "required": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of required field names"
+        },
+        "additionalProperties": {
+          "type": "boolean",
+          "description": "Whether additional undeclared properties are allowed"
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "description": "Example instances conforming to this schema",
+      "items": { "type": "object" }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Classification tags for this schema"
+    },
+    "created": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the schema was created"
+    },
+    "modified": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the schema was last modified"
+    }
+  },
+  "required": ["name", "format"]
+}
