@@ -58,6 +58,8 @@ apis:
   - type: Reference
     url: https://spec.graphql.org/
 
+  - url: graphql/schema-design-graphql.md
+    type: GraphQL
 - name: Apache Avro Schema
   description: Apache Avro is a data serialization system that uses JSON for schema definition. Avro schemas are widely used in event streaming with Apache Kafka and provide rich schema evolution support including backward and forward compatibility.
   humanURL: https://avro.apache.org/docs/current/spec.html
