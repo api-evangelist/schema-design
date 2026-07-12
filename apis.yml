@@ -87,6 +87,8 @@ apis:
     url: https://protobuf.dev/programming-guides/proto3/
 
 common:
+- type: DomainSecurity
+  url: security/schema-design-domain-security.yml
 - type: Website
   url: https://json-schema.org
 - type: JSONSchema
