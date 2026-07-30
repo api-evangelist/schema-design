@@ -1,3 +1,16 @@
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/schema-design.png
 name: Schema Design
 description: Schema Design is the practice of defining the structure, constraints, and semantics of data models used in APIs, databases, and data exchange formats. It encompasses schema-first API design approaches, data modeling methodologies, type systems, and tooling for creating, validating, and evolving data schemas. Key formats include JSON Schema, OpenAPI components/schemas, GraphQL types, Protocol Buffers, Apache Avro, and database DDL. Good schema design improves API consistency, enables automated validation, supports code generation, and facilitates interoperability between systems.
 url: https://github.com/api-evangelist/schema-design
