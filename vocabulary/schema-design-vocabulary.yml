@@ -99,21 +99,21 @@ terms:
 
 - term: Nullable
   label: Nullable Field
-  definition: A field that can accept a null value in addition to its declared type. In JSON Schema, expressed as type: [string, null] or using anyOf with null. In OpenAPI 3.0, the nullable: true extension is used; in 3.1, type arrays handle this natively.
+  definition: "A field that can accept a null value in addition to its declared type. In JSON Schema, expressed as type: [string, null] or using anyOf with null. In OpenAPI 3.0, the nullable: true extension is used; in 3.1, type arrays handle this natively."
   tags:
   - Types
   - OpenAPI
 
 - term: ReadOnly
   label: Read-Only Property
-  definition: A schema property marked as readOnly: true indicating it is computed or system-assigned and should not be included in request payloads. Examples include id, createdAt, and updatedAt fields.
+  definition: "A schema property marked as readOnly: true indicating it is computed or system-assigned and should not be included in request payloads. Examples include id, createdAt, and updatedAt fields."
   tags:
   - API Design
   - Conventions
 
 - term: WriteOnly
   label: Write-Only Property
-  definition: A schema property marked as writeOnly: true indicating it should be included in request payloads but will not be returned in responses. Commonly used for passwords and sensitive input fields.
+  definition: "A schema property marked as writeOnly: true indicating it should be included in request payloads but will not be returned in responses. Commonly used for passwords and sensitive input fields."
   tags:
   - API Design
   - Security
