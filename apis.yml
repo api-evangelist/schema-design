@@ -20,6 +20,15 @@ tags:
 - Schema Design
 - Data Modeling
 - API Design
+- JSON-Schema
+- OpenAPI
+- GraphQL
+- Data Validation
+- Type Systems
+tags_raw:
+- Schema Design
+- Data Modeling
+- API Design
 - JSON Schema
 - OpenAPI
 - GraphQL
@@ -33,6 +42,10 @@ apis:
   humanURL: https://json-schema.org
   baseURL: https://json-schema.org
   tags:
+  - JSON-Schema
+  - Validation
+  - Specification
+  tags_raw:
   - JSON Schema
   - Validation
   - Specification
