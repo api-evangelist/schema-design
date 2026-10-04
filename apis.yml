@@ -31,7 +31,7 @@ tags:
 - Schema Design
 - Data Modeling
 - API Design
-- JSON-Schema
+- JSON Schema
 - OpenAPI
 - GraphQL
 - Data Validation
@@ -45,21 +45,22 @@ tags_raw:
 - GraphQL
 - Data Validation
 - Type Systems
+- JSON-Schema
 created: '2026-05-02'
 modified: '2026-05-02'
 apis:
 - name: JSON Schema Specification
   description: JSON Schema is a vocabulary that allows you to annotate and validate JSON documents. It is the foundation for defining request and response body schemas in OpenAPI specifications and is used across many API tooling platforms for validation, documentation, and code generation.
   humanURL: https://json-schema.org
-  baseURL: https://json-schema.org
   tags:
-  - JSON-Schema
+  - JSON Schema
   - Validation
   - Specification
   tags_raw:
   - JSON Schema
   - Validation
   - Specification
+  - JSON-Schema
   properties:
   - type: Documentation
     url: https://json-schema.org/learn/
