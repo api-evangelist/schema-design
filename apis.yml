@@ -126,6 +126,12 @@ apis:
     url: https://protobuf.dev/programming-guides/proto3/
 
 common:
+- type: Plans
+  url: plans/schema-design-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/schema-design-rate-limits.yml
+- type: FinOps
+  url: finops/schema-design-finops.yml
 - url: https://json-schema.org/blog
   type: Blog
 - type: DomainSecurity
