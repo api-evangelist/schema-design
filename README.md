@@ -1,4 +1,4 @@
-# Schema Design
+# schema-design
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,132 +64,22 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Schema Design is the practice of defining the structure, constraints, and semantics of data models used in APIs, databases, and data exchange formats. It encompasses schema-first API design approaches, data modeling methodologies, type systems, and tooling for creating, validating, and evolving data schemas. Key formats include JSON Schema, OpenAPI components/schemas, GraphQL types, Protocol Buffers, Apache Avro, and database DDL.
+## schema-design on APIs.io
 
-**URL:** [https://github.com/api-evangelist/schema-design](https://github.com/api-evangelist/schema-design)
+Everything profiled for schema-design is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/schema-design/](https://apis.io/providers/schema-design/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+## API Evangelist rating
 
- - Schema Design, Data Modeling, API Design, JSON Schema, OpenAPI, GraphQL, Data Validation, Type Systems
+Not yet rated. See [apis.io/providers/schema-design/](https://apis.io/providers/schema-design/).
 
-## Timestamps
+## How this profile is made
 
-- **Created:** 2026-05-02
-- **Modified:** 2026-05-02
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## APIs
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for schema-design: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema Specification
+## Open an issue
 
-JSON Schema is a vocabulary that allows you to annotate and validate JSON documents. It is the foundation for defining request and response body schemas in OpenAPI specifications.
-
-**Human URL:** [https://json-schema.org](https://json-schema.org)
-
-#### Tags
-
- - JSON Schema, Validation, Specification
-
-#### Properties
-
-- [Documentation](https://json-schema.org/learn/)
-- [Reference](https://json-schema.org/specification)
-
-### OpenAPI Schema Objects
-
-OpenAPI uses a subset of JSON Schema (with extensions) to define the schema of request bodies, parameters, and response payloads.
-
-**Human URL:** [https://spec.openapis.org/oas/v3.1.0#schema-object](https://spec.openapis.org/oas/v3.1.0#schema-object)
-
-#### Tags
-
- - OpenAPI, REST, API Design, Schema
-
-#### Properties
-
-- [Documentation](https://spec.openapis.org/oas/v3.1.0#schema-object)
-- [Reference](https://swagger.io/specification/)
-
-### GraphQL Type System
-
-GraphQL uses a strong type system to define the shape of data that can be queried, forming the contract between clients and servers.
-
-**Human URL:** [https://graphql.org/learn/schema/](https://graphql.org/learn/schema/)
-
-#### Tags
-
- - GraphQL, Type System, API Design, Schema
-
-#### Properties
-
-- [Documentation](https://graphql.org/learn/schema/)
-- [Reference](https://spec.graphql.org/)
-
-### Apache Avro Schema
-
-Apache Avro is a data serialization system using JSON for schema definition, widely used in Apache Kafka event streaming.
-
-**Human URL:** [https://avro.apache.org/docs/current/spec.html](https://avro.apache.org/docs/current/spec.html)
-
-#### Tags
-
- - Avro, Event Streaming, Kafka, Serialization
-
-#### Properties
-
-- [Documentation](https://avro.apache.org/docs/current/spec.html)
-
-### Protocol Buffers (Protobuf) Schema
-
-Protocol Buffers is Google's language-neutral, extensible mechanism for serializing structured data, used heavily in gRPC APIs.
-
-**Human URL:** [https://protobuf.dev/programming-guides/proto3/](https://protobuf.dev/programming-guides/proto3/)
-
-#### Tags
-
- - Protobuf, gRPC, Serialization, API Design
-
-#### Properties
-
-- [Documentation](https://protobuf.dev/programming-guides/proto3/)
-
-## Common Properties
-
-- [Website](https://json-schema.org)
-- [JSON-LD](json-ld/schema-design-context.jsonld)
-- [Vocabulary](vocabulary/schema-design-vocabulary.yml)
-
-## JSON Schema
-
-| Schema | Description |
-|---|---|
-| [schema-design-api-schema-schema.json](json-schema/schema-design-api-schema-schema.json) | Schema representing an API schema definition entity |
-
-## JSON Structure
-
-| Structure | Description |
-|---|---|
-| [schema-design-api-schema-structure.json](json-structure/schema-design-api-schema-structure.json) | Structural documentation for API schema design patterns |
-
-## JSON-LD
-
-| Context | Description |
-|---|---|
-| [schema-design-context.jsonld](json-ld/schema-design-context.jsonld) | JSON-LD context for schema design vocabulary |
-
-## Examples
-
-| Example | Description |
-|---|---|
-| [schema-design-json-schema-example.json](examples/schema-design-json-schema-example.json) | Well-designed JSON Schema example for a user profile entity |
-
-## Vocabulary
-
-| Vocabulary | Description |
-|---|---|
-| [schema-design-vocabulary.yml](vocabulary/schema-design-vocabulary.yml) | Schema design domain terminology and concepts |
-
-## Maintainers
-
-**FN:** API Evangelist
-
-**Email:** info@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/schema-design/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
